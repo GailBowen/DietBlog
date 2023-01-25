@@ -6,8 +6,24 @@ app.set('view engine', 'ejs');
 const articleRouter = require('./routes/articles');
 app.use('/articles', articleRouter);
 
+let yourDate = new Date();
+
+console.log('yourDate', yourDate.toISOString().split('T')[0]);
+
 app.get('/', (req, res) => {
-	res.render('index');
+	const articles = [{
+		title: 'Test Article',
+		createdAt: new Date(),
+		description: 'Test description'
+	},
+	{
+		title: 'Test Article 2',
+		createdAt: new Date(),
+		description: 'Test description 2nd'
+	}
+	];
+
+	res.render('index', {articles : articles});
 })
 
 app.listen(5000);

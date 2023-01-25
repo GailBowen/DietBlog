@@ -47,16 +47,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
-
-#Base specific
-/frontend/node_modules
-/backend/node_modules
-/docker/dev/*.env
-/frontend/credentials/credentials.json
-/backend/credentials/credentials.json
-/frontend/credentials/env.json
-/backend/credentials/env.json
-/client/public/**/*
-/frontend/logs
-/backend/logs
