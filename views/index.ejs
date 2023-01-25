@@ -16,7 +16,7 @@
     <div class="card mt-4">
         <h4 class="card-title"><%= article.title %></h4>
         <div class="card-subtitle text-muted mb-2">
-         <%= article.createdAt.toISOString().split('T')[0] %>
+         <%= article.createdAt.toLocaleDateString() %>
         </div>
     </div>
   <% }) %>
