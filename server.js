@@ -1,14 +1,18 @@
 const express = require('express');
+
+const mongoose = require('mongoose');
+
+mongoose.set('strictQuery', false);
+
+mongoose.connect('mongodb://localhost/blob');
+
 const app = express();
 
 app.set('view engine', 'ejs');
 
 const articleRouter = require('./routes/articles');
-app.use('/articles', articleRouter);
 
-let yourDate = new Date();
-
-console.log('yourDate', yourDate.toISOString().split('T')[0]);
+app.use(express.urlencoded({ extended: false}));
 
 app.get('/', (req, res) => {
 	const articles = [{
@@ -27,5 +31,7 @@ app.get('/', (req, res) => {
 
 	
 })
+
+app.use('/articles', articleRouter);
 
 app.listen(5000);
