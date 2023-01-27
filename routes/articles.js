@@ -6,8 +6,16 @@ router.get('/new', (req, res) => {
 	res.render('articles/new', { article: new Article() })
 });
 
-router.get('/:id', (req, res) => {
-	res.send(req.params.id)
+router.get('/:id', async (req, res) => {
+	const article = await Article.findById(req.params.id);
+
+	console.log('req.params.id', req.params.id);
+
+	console.log('req.params', req.params);
+
+	if (article == null) res.redirect('/');
+	console.log('just before show***', article);
+	res.render('articles/show', { article: article });
 });
 
 router.post('/', async (req, res) => {
@@ -22,6 +30,7 @@ router.post('/', async (req, res) => {
 		res.redirect(`/articles/${article.id}`)
 	} catch (e) {
 		console.log('still broken! *********:', e)
+		console.log('article in catch**&&&&&&&', article)
 		res.render('articles/new', {article: article});
 	}
 	
