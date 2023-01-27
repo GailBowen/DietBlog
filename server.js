@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
 
-mongoose.connect('mongodb://localhost/blob');
+mongoose.connect('mongodb://127.0.0.1/blob');
 
 const app = express();
 
@@ -34,4 +34,4 @@ app.get('/', (req, res) => {
 
 app.use('/articles', articleRouter);
 
-app.listen(5000);
+app.listen(5001);

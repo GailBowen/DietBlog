@@ -7,7 +7,7 @@ router.get('/new', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-
+	res.send(req.params.id)
 });
 
 router.post('/', async (req, res) => {
@@ -21,6 +21,7 @@ router.post('/', async (req, res) => {
 		article = await article.save();
 		res.redirect(`/articles/${article.id}`)
 	} catch (e) {
+		console.log('still broken! *********:', e)
 		res.render('articles/new', {article: article});
 	}
 	
