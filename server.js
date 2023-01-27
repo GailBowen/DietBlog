@@ -1,5 +1,7 @@
 const express = require('express');
 
+const methodOverride = require('method-override');
+
 const mongoose = require('mongoose');
 
 mongoose.set('strictQuery', false);
@@ -15,6 +17,8 @@ app.set('view engine', 'ejs');
 const articleRouter = require('./routes/articles');
 
 app.use(express.urlencoded({ extended: false}));
+
+app.use(methodOverride('_method'));
 
 app.get('/', async (req, res) => {
 
