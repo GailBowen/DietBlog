@@ -25,6 +25,21 @@ const articleSchema = new mongoose.Schema({
     stomach: {
         type: String
     },
+    breakfast: {
+        type: String
+    },
+    lunch: {
+        type: String
+    },
+    dinner: {
+        type: String
+    },
+    snacks: {
+        type: String
+    },
+    fruit: {
+        type: String
+    },
     markdown: {
         type: String,
         required: true

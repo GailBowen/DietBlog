@@ -42,6 +42,13 @@ function saveArticleAndRedirect(path)
 	article.weight = req.body.weight
 	article.exercise = req.body.exercise
 	article.stomach = req.body.stomach
+
+	article.breakfast = req.body.breakfast
+	article.lunch = req.body.lunch
+	article.dinner = req.body.dinner
+	article.snacks = req.body.snacks
+	article.fruit = req.body.fruit
+
 	article.markdown = req.body.markdown
 
 	try {
