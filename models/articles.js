@@ -22,6 +22,9 @@ const articleSchema = new mongoose.Schema({
     exercise: {
         type: String
     },
+    stomach: {
+        type: String
+    },
     markdown: {
         type: String,
         required: true

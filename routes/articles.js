@@ -41,6 +41,7 @@ function saveArticleAndRedirect(path)
 	article.wisdom = req.body.wisdom
 	article.weight = req.body.weight
 	article.exercise = req.body.exercise
+	article.stomach = req.body.stomach
 	article.markdown = req.body.markdown
 
 	try {
