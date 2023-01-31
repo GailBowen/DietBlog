@@ -40,6 +40,12 @@ const articleSchema = new mongoose.Schema({
     fruit: {
         type: String
     },
+    drinks: {
+        type: String
+    },
+    booze: {
+        type: String
+    },
     markdown: {
         type: String,
         required: true

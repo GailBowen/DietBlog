@@ -48,6 +48,8 @@ function saveArticleAndRedirect(path)
 	article.dinner = req.body.dinner
 	article.snacks = req.body.snacks
 	article.fruit = req.body.fruit
+	article.drinks = req.body.drinks
+	article.booze = req.body.booze
 
 	article.markdown = req.body.markdown
 
