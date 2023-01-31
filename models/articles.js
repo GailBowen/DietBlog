@@ -15,6 +15,10 @@ const articleSchema = new mongoose.Schema({
     wisdom: {
         type: String
     },
+    weight: {
+        type: Number,
+        required: true
+    },
     markdown: {
         type: String,
         required: true
