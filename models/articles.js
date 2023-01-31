@@ -12,7 +12,7 @@ const articleSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    wisdom: {
         type: String
     },
     markdown: {
