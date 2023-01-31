@@ -19,6 +19,9 @@ const articleSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    exercise: {
+        type: String
+    },
     markdown: {
         type: String,
         required: true

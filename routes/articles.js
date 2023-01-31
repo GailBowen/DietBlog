@@ -40,6 +40,7 @@ function saveArticleAndRedirect(path)
 	article.title = req.body.title
 	article.wisdom = req.body.wisdom
 	article.weight = req.body.weight
+	article.exercise = req.body.exercise
 	article.markdown = req.body.markdown
 
 	try {
