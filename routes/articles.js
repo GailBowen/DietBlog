@@ -50,6 +50,7 @@ function saveArticleAndRedirect(path)
 	article.fruit = req.body.fruit
 	article.drinks = req.body.drinks
 	article.booze = req.body.booze
+	article.reviewed = req.body.reviewed
 
 	article.markdown = req.body.markdown
 

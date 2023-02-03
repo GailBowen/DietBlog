@@ -46,6 +46,9 @@ const articleSchema = new mongoose.Schema({
     booze: {
         type: String
     },
+    reviewed: {
+        type: Boolean
+    },
     markdown: {
         type: String,
         required: true
